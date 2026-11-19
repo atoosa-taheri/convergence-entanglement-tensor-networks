@@ -1,1 +1,16 @@
+name = "TN2"
+uuid = "a7e4c8b2-6d31-4f90-9a52-3c8b7e1d4f60"
+authors = ["Atoosa Taheri"]
+version = "0.1.0"
 
+[deps]
+KrylovKit = "0b1a1467-8014-51b9-945f-bf0ae24f4b77"
+
+[compat]
+KrylovKit = "0.10.4"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
