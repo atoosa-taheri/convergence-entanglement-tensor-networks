@@ -4,25 +4,25 @@ from pyscf import gto, scf
 def build(n, R):
     atoms = []
 
-        for i in range(n):
-            atoms.append(
-                ("H", (0.0, 0.0, i * R))
-            )
-
-        mol = gto.M(
-            atom=atoms,
-            basis="sto-3g",
-            unit="Bohr",
-            charge=0,
-            spin=0,
-            verbose=4
-                                                             
+    for i in range(n):
+        atoms.append(
+            ("H", (0.0, 0.0, i * R))
         )
 
-        mf = scf.RHF(mol)
-        mf.kernel()
+    mol = gto.M(
+        atom=atoms,
+        basis="sto-3g",
+        unit="Bohr",
+        charge=0,
+        spin=0,
+        verbose=4
+                                                             
+    )
 
-        return mol, mf
+    mf = scf.RHF(mol)
+    mf.kernel()
+
+    return mol, mf
 
 mol, mf = build(n=4, R=1.8)
 
