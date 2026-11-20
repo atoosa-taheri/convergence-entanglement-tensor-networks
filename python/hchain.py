@@ -21,7 +21,12 @@ def build(n, R):
     mf.kernel()
 
     return mol, mf
-  
+
+
+if __name__ == "__main__":
+    mol, mf = build(n=4, R=1.8)
+    print("Converged:", mf.converged)
+    print("E_HF:", mf.e_tot)  
 mol, mf = build(n=4, R=1.8)
 
 print("Converged:", mf.converged)
