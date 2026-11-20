@@ -28,8 +28,6 @@ print("Converged:", mf.converged)
 print("E_HF (Hartree):", mf.e_tot)
 print("Number of atoms:", mol.natm)
 print("Number of electrons:", mol.nelectron)
-
 E_HF_H4_R18 = mf.e_tot
-
 print(f"H4 RHF energy = {E_HF_H4_R18:.12f} Hartree")
                                                                                                         print(f"SCF converged = {mf.converged}")
